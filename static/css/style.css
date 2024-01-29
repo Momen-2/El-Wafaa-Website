@@ -195,6 +195,7 @@ hr {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 99999;
   background-color: var(--background-color);
   height: 100%;
   width: 100%;
