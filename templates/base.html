@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html dir="rtl" lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="language" content="English" />
+    <meta name="author" content="Momen Ahmed" />
+    <meta name="title" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="shortcut icon" href="{% static './images/icon.png' %}" type="image/x-icon" />
+    <link rel="stylesheet" href="{% static './css/normalize.css' %}" />
+    <link rel="stylesheet" href="{% static './css/all.min.css' %}" />
+    <link rel="stylesheet" href="{% static './css/style.css' %}" />
+    <title>الوفاء</title>
+  </head>
+
+  <body>
+    <div class="pre-loader">
+      <div class="loading"></div>
+    </div>
+
+    {% block content %}
+    {% endblock %}
+
+    <div class="scroll-to-top">
+      <button onclick="topFunction()" id="scrollToUpButton" class="button">
+        <i class="fa fa-angle-up"></i>
+      </button>
+    </div>
+
+    <script src="{% static './js/main.js' %}"></script>
+    <script src="{% static './js/wow.min.js' %}"></script>
+    <script>
+      new WOW().init();
+    </script>
+  </body>
+</html>
