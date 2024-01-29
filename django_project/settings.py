@@ -7,7 +7,7 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, "templates")
 
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
-DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = ["*"]
 
 SESSION_COOKIE_SECURE = True
@@ -18,8 +18,6 @@ if DEBUG == False:
 SECURE_HSTS_SECONDS = 31536000
 SECURE_HSTS_PRELOAD = True
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-
-CSRF_TRUSTED_ORIGINS = ['http://*', 'https://*']
 
 INSTALLED_APPS = [
     "django.contrib.admin",
