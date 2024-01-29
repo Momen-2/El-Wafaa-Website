@@ -15,7 +15,7 @@
 
   <div class="products">  
     {% for fruit in fruits %}
-      <a href="{% url 'base:product' fruit.slug %}">
+      <a href="{% url 'base:product' fruit.pk %}">
         <img class="image" src="{{fruit.image.url}}" alt="Product Thumbnail" />
         <div class="product-info">
           <h4>{{ fruit.name }}</h4>
