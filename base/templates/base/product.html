@@ -1,1 +1,18 @@
-<h1>test</h1>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section class="hero product-page-hero">
+  <div class="container"></div>
+  <div class="content wow zoomIn">
+    <h1>{{ product.name }}</h1>
+  </div>
+</section>
+
+<section class="single-product container">
+  <img class="image" src="{{product.image.url}}" alt="Product Thumbnail" />
+  <div>
+    <h3>{{ product.name }}</h3>
+    <p>{{ product.description }}</p>
+  </div>
+</section>
+{% endblock %}

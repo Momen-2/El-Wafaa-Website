@@ -3,7 +3,7 @@
 {% block content %}
 <section class="hero">
   <div class="container">
-    <img class="hero-image" src="{% static './images/hero.jpg' %}" alt="Hero Image" />
+    <img class="hero-image" src="{% static './images/hero-1.jpg' %}" alt="Hero Image" />
   </div>
   <div class="content wow zoomIn">
     <h1>الوفاء</h1>
@@ -11,11 +11,11 @@
 </section>
 
 <section class="container">
-  <h2>الفواكة</h2>
+  <h2>الفواكه</h2>
 
   <div class="products">  
     {% for fruit in fruits %}
-      <a href="{% url 'base:product' fruit.pk %}">
+      <a class="product zoom" href="{% url 'base:product' fruit.pk %}">
         <img class="image" src="{{fruit.image.url}}" alt="Product Thumbnail" />
         <div class="product-info">
           <h4>{{ fruit.name }}</h4>
@@ -31,7 +31,7 @@
 
   <div class="products">  
     {% for vegetable in vegetables %}
-      <a href="{% url 'base:product' vegetable.slug %}">
+      <a class="product zoom" href="{% url 'base:product' vegetable.pk %}">
         <img class="image" src="{{vegetable.image.url}}" alt="Product Thumbnail" />
         <div class="product-info">
           <h4>{{ vegetable.name }}</h4>
@@ -46,7 +46,7 @@
 
   <div class="products">  
     {% for spice in spices %}
-      <a href="{% url 'base:product' spice.slug %}">
+      <a class="product zoom" href="{% url 'base:product' spice.pk %}">
         <img class="image" src="{{spice.image.url}}" alt="Product Thumbnail" />
         <div class="product-info">
           <h4>{{ spice.name }}</h4>
@@ -63,7 +63,16 @@
 
     <div class="contact">
       <div class="contact-info">
-        <p>Email: momen-ahmed@outlook.com</p>
+        <p>Address: 198 West 21th Street, Suite 721 New York NY 10016</p>
+      </div>
+      <div class="contact-info">
+        <p>Phone: + 1235 2355 98</p>
+      </div>
+      <div class="contact-info">
+        <p>Email: info@yoursite.com</p>
+      </div>
+      <div class="contact-info">
+        <p>Website: yoursite.com</p>
       </div>
     </div>
   </section>
