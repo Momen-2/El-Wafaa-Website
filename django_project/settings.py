@@ -7,11 +7,12 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, "templates")
 
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
-DEBUG = False
+DEBUG = True
 ALLOWED_HOSTS = ["*"]
 
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
+CSRF_TRUSTED_ORIGINS = ["*"]
 # if DEBUG == False:
 #     SECURE_SSL_REDIRECT = True
 
