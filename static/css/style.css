@@ -335,12 +335,10 @@ section h2 {
 }
 .products .product .product-info {
   padding: 0 1em;
-  line-height: normal;
-  margin-bottom: 1em;
+  margin: 1em;
 }
 .products .product .product-info h4 {
   line-height: normal;
-  margin: 1rem;
   text-align: center;
   font-weight: 500;
 }
