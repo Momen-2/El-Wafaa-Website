@@ -12,7 +12,7 @@ ALLOWED_HOSTS = ["*"]
 
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
-ALLOWED_ORIGINS = ['http://*', 'https://*']
+ALLOWED_ORIGINS = ["https://web-production-0bbb1.up.railway.app"]
 CSRF_TRUSTED_ORIGINS = ALLOWED_ORIGINS.copy()
 # if DEBUG == False:
 #     SECURE_SSL_REDIRECT = True
