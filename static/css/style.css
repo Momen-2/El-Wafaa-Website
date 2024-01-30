@@ -346,6 +346,11 @@ section h2 {
   text-align: center;
   font-weight: 500;
 }
+@media (min-width: 500px) {
+  .products {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
 @media (min-width: 655px) {
   .products {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -365,9 +370,6 @@ section h2 {
 }
 .single-product .image {
   width: 450px;
-}
-@media (max-width: 400px) {
-
 }
 @media (max-width: 992px) {
   .single-product {
