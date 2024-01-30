@@ -17,6 +17,7 @@
     <link rel="shortcut icon" href="{% static './images/icon.png' %}" type="image/x-icon" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="{% static './css/normalize.css' %}" />
+    <link rel="stylesheet" href="{% static './css/animate.css' %}" />
     <link rel="stylesheet" href="{% static './css/style.css' %}" />
     <title>الوفاء</title>
   </head>
@@ -36,5 +37,9 @@
     </div>
 
     <script src="{% static './js/main.js' %}"></script>
+    <script src="{% static './js/wow.min.js' %}"></script>
+    <script>
+      new WOW().init();
+    </script>
   </body>
 </html>
