@@ -336,6 +336,7 @@ section h2 {
 .products .product .image {
   border-radius: var(--border-radius) var(--border-radius) 0 0;
   height: 180px;
+  width: 250px;
 }
 .products .product .product-info {
   padding: 0 1em;
@@ -351,6 +352,9 @@ section h2 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
   .product {
+    width: 300px;
+  }
+  .products .product .image {
     width: 300px;
   }
 }
