@@ -328,7 +328,7 @@ section h2 {
   border-radius: var(--border-radius);
   border: 1px solid var(--color-3);
   transition: var(--transition);
-  width: 300px;
+  width: 250px;
 }
 .products .product:hover {
   box-shadow: var(--shadow-4);
@@ -336,7 +336,7 @@ section h2 {
 .products .product .image {
   border-radius: var(--border-radius) var(--border-radius) 0 0;
   height: 180px;
-  width: 300px;
+  width: 250px;
 }
 .products .product .product-info {
   padding: 0 1em;
@@ -351,22 +351,10 @@ section h2 {
   .products {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-  .product {
-    width: 300px;
-  }
-  .products .product .image {
-    width: 300px;
-  }
 }
 @media (min-width: 992px) {
   .products {
     grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-  .product {
-    width: 250px;
-  }
-  .products .product .image {
-    width: 250px;
   }
 }
 
