@@ -53,6 +53,9 @@ p {
   font-size: 1.2rem;
   font-weight: 500;
   line-height: 1.7em;
+  overflow: hidden;
+  word-wrap: break-word;
+  max-width: 500px;
   color: gray;
 }
 
@@ -393,8 +396,6 @@ section h2 {
   max-height: 300px;
 }
 .contact .contact-info p {
-  overflow: hidden;
-  word-wrap: break-word;
   line-height: normal;
 }
 @media (min-width: 542px) {
