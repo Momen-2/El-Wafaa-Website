@@ -328,7 +328,7 @@ section h2 {
   border-radius: var(--border-radius);
   border: 1px solid var(--color-3);
   transition: var(--transition);
-  width: 250px;
+  width: 100%;
 }
 .products .product:hover {
   box-shadow: var(--shadow-4);
@@ -336,7 +336,6 @@ section h2 {
 .products .product .image {
   border-radius: var(--border-radius) var(--border-radius) 0 0;
   height: 180px;
-  width: 250px;
 }
 .products .product .product-info {
   padding: 0 1em;
