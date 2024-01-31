@@ -557,6 +557,7 @@ section h2 {
 }
 
 .single-product {
+  margin-top: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
