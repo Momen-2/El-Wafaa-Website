@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
+{% include 'navbar.html' %}
+
 <section class="single-product container">
   <img class="image" src="{{product.image.url}}" alt="Product Thumbnail" />
   <div>

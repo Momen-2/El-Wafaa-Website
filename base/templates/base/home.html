@@ -2,6 +2,8 @@
 {% load static %}
 {% block content %}
 <section class="hero">
+  {% include "navbar.html" %}
+  
   <div class="container">
     <img class="avocado-1 vertical-animation" src="{% static './images/avocado-1.png' %}" alt="Hero Image"/>
     <img class="avocado-2 horizontal-animation" src="{% static './images/avocado-2.png' %}" alt="Hero Image"/>
@@ -14,7 +16,7 @@
   </div>
 </section>
 
-<section class="container wow zoomIn" data-wow-delay="1.5s">
+<section id="fruits" class="container wow zoomIn" data-wow-delay="1.5s">
   <h2>الفواكه</h2>
 
   <div class="products">  
@@ -30,22 +32,24 @@
   </div>
 </section>
 
-<section class="container wow zoomIn">
-  <h2>الخضروات</h2>
+<div class="contact-background-color">
+  <section id="vegetables" class="container wow zoomIn">
+    <h2>الخضروات</h2>
 
-  <div class="products">  
-    {% for vegetable in vegetables %}
-      <a class="product zoom" href="{% url 'base:product' vegetable.pk %}">
-        <img class="image" src="{{vegetable.image.url}}" alt="Product Thumbnail" />
-        <div class="product-info">
-          <h4>{{ vegetable.name }}</h4>
-        </div>
-      </a>
-    {% endfor %}
-  </div>
-</section>
+    <div class="products">  
+      {% for vegetable in vegetables %}
+        <a class="product zoom" href="{% url 'base:product' vegetable.pk %}">
+          <img class="image" src="{{vegetable.image.url}}" alt="Product Thumbnail" />
+          <div class="product-info">
+            <h4>{{ vegetable.name }}</h4>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  </section>
+</div>
 
-<section class="container wow zoomIn">
+<section id="spices" class="container wow zoomIn">
   <h2>التوابل</h2>
 
   <div class="products">  
@@ -57,7 +61,6 @@
         </div>
       </a>
     {% endfor %}
-  </div>
   </div>
 </section>
 
