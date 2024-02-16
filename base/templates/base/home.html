@@ -27,6 +27,8 @@
           <h4>{{ fruit.name }}</h4>
         </div>
       </a>
+      {% empty %}
+      <h4>لا يوجد فواكه متوفرة حاليًا</h4>
     {% endfor %}
   </div>
   </div>
@@ -44,6 +46,8 @@
             <h4>{{ vegetable.name }}</h4>
           </div>
         </a>
+        {% empty %}
+        <h4>لا يوجد خضروات متوفرة حاليًا</h4>
       {% endfor %}
     </div>
   </section>
@@ -60,6 +64,8 @@
           <h4>{{ spice.name }}</h4>
         </div>
       </a>
+      {% empty %}
+      <h4>لا يوجد توابل متوفرة حاليًا</h4>
     {% endfor %}
   </div>
 </section>
