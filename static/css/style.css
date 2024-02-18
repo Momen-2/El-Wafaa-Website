@@ -169,7 +169,6 @@ hr {
   width: 100%;
   padding: 0.375rem 0.75rem;
   border-radius: var(--border-radius);
-  background: var(--background-color);
   border: 1px solid var(--color-1);
 }
 .form-row {
@@ -590,28 +589,31 @@ section h2 {
 .contact-background-color {
   background-color: var(--background-color);
 }
-.contact {
-  direction: ltr;
+.contact-form {
   display: grid;
   gap: 20px;
+  direction: ltr;
 }
-.contact .contact-info {
+.contact-form .contact-info {
   background-color: var(--white);
   padding: 0 1em;
   border-radius: var(--border-radius);
   box-shadow: var(--shadow-3);
   max-height: 300px;
 }
-.contact .contact-info p {
+.contact-form .contact-info p {
   line-height: normal;
 }
+.contact .form {
+  margin-top: 1rem;
+}
 @media (min-width: 542px) {
-  .contact {
+  .contact-form {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 @media (min-width: 882px) {
-  .contact {
+  .contact-form {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }

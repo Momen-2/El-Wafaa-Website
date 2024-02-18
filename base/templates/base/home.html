@@ -11,6 +11,7 @@
     <img class="red-cabbage cross-animation" src="{% static './images/red-cabbage.png' %}" alt="Hero Image"/>
     <img class="tomato wow slideInLeft" src="{% static './images/tomato.png' %}" alt="Hero Image"/>
   </div>
+
   <div class="content wow zoomIn">
     <h1>الوفاء</h1>
   </div>
@@ -30,7 +31,6 @@
       {% empty %}
       <h4>لا يوجد فواكه متوفرة حاليًا</h4>
     {% endfor %}
-  </div>
   </div>
 </section>
 
@@ -75,18 +75,25 @@
     <h2>التواصل</h2>
 
     <div class="contact">
-      <div class="contact-info">
-        <p>Address: 198 West 21th Street, Suite 721 New York NY 10016</p>
+      <div class="contact-form">
+        <div class="contact-info">
+          <p>Address: Egypt, Alexandria, Mostafa Kamel St.</p>
+        </div>
+        <div class="contact-info">
+          <p>Phone: +20 109 222 2720</p>
+        </div>
+        <div class="contact-info">
+          <p>Email: elwafaawebsite@gmail.com</p>
+        </div>
       </div>
-      <div class="contact-info">
-        <p>Phone: + 1235 2355 98</p>
-      </div>
-      <div class="contact-info">
-        <p>Email: info@yoursite.com</p>
-      </div>
-      <div class="contact-info">
-        <p>Website: yoursite.com</p>
-      </div>
+
+      <form method="post" class="form">
+        {% csrf_token %}
+        <input type="email" class="form-input form-row" name="email" placeholder="بريدك الإلكتروني" required>
+        <input type="text" class="form-input form-row" name="subject" placeholder="عنوان الرسالة" required>
+        <textarea name="message" class="form-textarea form-row" placeholder="الرسالة" cols="30" rows="10" required></textarea>
+        <button type="submit" class="button">إرسال</button>
+      </form>  
     </div>
   </section>
 </div>
