@@ -35,3 +35,11 @@ class HomeTemplateView(TemplateView):
 class ProductDetailView(DetailView):
     model = models.Product
     template_name = "base/product.html"
+    
+def error_404(request, exception):
+    context = {}
+    context["fruits"] = models.Product.objects.filter(type="FRUIT")
+    context["vegetables"] = models.Product.objects.filter(type="VEGETABLE")
+    context["spices"] = models.Product.objects.filter(type="SPICE")
+            
+    return render(request, "base/404.html", context)

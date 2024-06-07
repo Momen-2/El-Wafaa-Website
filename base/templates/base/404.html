@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+{% include "navbar.html" %}
+
+<section id="fruits" class="container wow zoomIn" data-wow-delay="1.5s">
+  <h2>الفواكه</h2>
+
+  <div class="products">  
+    {% for fruit in fruits %}
+      <a class="product zoom" href="{% url 'base:product' fruit.pk %}">
+        <img class="image" src="{{fruit.image.url}}" alt="Product Thumbnail" />
+        <div class="product-info">
+          <h4>{{ fruit.name }}</h4>
+        </div>
+      </a>
+      {% empty %}
+      <h4>لا يوجد فواكه متوفرة حاليًا</h4>
+    {% endfor %}
+  </div>
+</section>
+
+<div class="contact-background-color">
+  <section id="vegetables" class="container wow zoomIn">
+    <h2>الخضروات</h2>
+
+    <div class="products">  
+      {% for vegetable in vegetables %}
+        <a class="product zoom" href="{% url 'base:product' vegetable.pk %}">
+          <img class="image" src="{{vegetable.image.url}}" alt="Product Thumbnail" />
+          <div class="product-info">
+            <h4>{{ vegetable.name }}</h4>
+          </div>
+        </a>
+        {% empty %}
+        <h4>لا يوجد خضروات متوفرة حاليًا</h4>
+      {% endfor %}
+    </div>
+  </section>
+</div>
+
+<section id="spices" class="container wow zoomIn">
+  <h2>التوابل</h2>
+
+  <div class="products">  
+    {% for spice in spices %}
+      <a class="product zoom" href="{% url 'base:product' spice.pk %}">
+        <img class="image" src="{{spice.image.url}}" alt="Product Thumbnail" />
+        <div class="product-info">
+          <h4>{{ spice.name }}</h4>
+        </div>
+      </a>
+      {% empty %}
+      <h4>لا يوجد توابل متوفرة حاليًا</h4>
+    {% endfor %}
+  </div>
+</section>
+{% endblock  %}

@@ -7,15 +7,12 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, "templates")
 
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
-DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = ["*"]
 
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 CSRF_TRUSTED_ORIGINS = ["https://web-production-0bbb1.up.railway.app"]
-
-# if DEBUG == False:
-#     SECURE_SSL_REDIRECT = True
 
 SECURE_HSTS_SECONDS = 31536000
 SECURE_HSTS_PRELOAD = True
