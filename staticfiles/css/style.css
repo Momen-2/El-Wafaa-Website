@@ -128,7 +128,6 @@ hr {
   padding: 0.8rem 2rem;
   box-shadow: var(--shadow-2);
   transition: var(--transition);
-  text-transform: capitalize;
   display: inline-block;
 }
 .button a {
@@ -165,7 +164,6 @@ hr {
   display: block;
   font-size: var(--small-text);
   margin-bottom: 0.5rem;
-  text-transform: capitalize;
   letter-spacing: var(--letter-spacing);
 }
 .form-input,
@@ -185,11 +183,6 @@ hr {
 ::placeholder {
   font-family: inherit;
   color: var(--color-1);
-}
-.form-alert {
-  color: var(--color-1);
-  letter-spacing: var(--letter-spacing);
-  text-transform: capitalize;
 }
 
 .pre-loader {
